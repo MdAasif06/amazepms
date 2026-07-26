@@ -22,9 +22,9 @@ export default function LogoCloud() {
             {[...logos, ...logos].map((name, i) => (
               <div
                 key={i}
-                className="flex items-center gap-2.5 rounded-2xl border border-border bg-white/[0.02] px-6 py-3.5"
+                className="flex items-center gap-2.5 rounded-2xl border border-border bg-white/2 px-6 py-3.5"
               >
-                <span className="h-2.5 w-2.5 rounded-sm bg-gradient-to-br from-primary to-accent" />
+                <span className="h-2.5 w-2.5 rounded-sm bg-linear-to-br from-primary to-accent" />
                 <span className="whitespace-nowrap font-display text-base font-semibold text-muted-foreground">
                   {name}
                 </span>

@@ -77,7 +77,7 @@ export default function Workflow() {
     <section id="workflow" ref={sectionRef} className="relative px-4 py-24 lg:py-32">
       <div className="mx-auto max-w-5xl">
         <SectionHeading
-          eyebrow="How it works"
+          // eyebrow="How it works"
           title="From legacy chaos to calm, in four steps"
           subtitle="A proven onboarding path that gets teams of any size live quickly — with support at every stage."
         />
@@ -87,7 +87,7 @@ export default function Workflow() {
           <div className="absolute left-3 top-2 h-full w-px bg-border sm:left-1/2 sm:-translate-x-1/2">
             <div
               ref={lineRef}
-              className="h-full w-full origin-top bg-gradient-to-b from-primary via-accent-2 to-accent"
+              className="h-full w-full origin-top bg-linear-to-b from-primary via-accent-2 to-accent"
             />
           </div>
 
@@ -103,7 +103,7 @@ export default function Workflow() {
                   }`}
                 >
                   {/* node */}
-                  <span className="absolute -left-[1.55rem] top-1 flex h-6 w-6 items-center justify-center rounded-full border border-border-strong bg-background sm:left-1/2 sm:top-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2">
+                  <span className="absolute left-[1.55rem] top-1 flex h-6 w-6 items-center justify-center rounded-full border border-border-strong bg-background sm:left-1/2 sm:top-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2">
                     <span className="h-2 w-2 rounded-full bg-accent animate-pulse-dot" />
                   </span>
 

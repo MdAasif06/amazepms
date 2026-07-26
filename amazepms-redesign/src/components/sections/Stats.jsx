@@ -27,7 +27,7 @@ export default function Stats() {
     <section className="relative px-4 py-16 lg:py-20">
       <div className="mx-auto max-w-6xl">
         <Reveal>
-          <div className="glass-strong grid grid-cols-2 gap-8 rounded-[2rem] px-6 py-12 shadow-card sm:px-10 lg:grid-cols-4">
+          <div className="glass-strong grid grid-cols-2 gap-8 rounded-4xl px-6 py-12 shadow-card sm:px-10 lg:grid-cols-4">
             {stats.map((s) => (
               <Stat key={s.label} {...s} />
             ))}

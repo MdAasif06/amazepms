@@ -38,7 +38,7 @@ export default function Testimonials() {
     <section id="testimonials" className="relative px-4 py-24 lg:py-32">
       <div className="mx-auto max-w-6xl">
         <SectionHeading
-          eyebrow="Customers"
+          // eyebrow="Customers"
           title="Loved by the teams who run on it"
           subtitle="From boutique operators to national portfolios, property teams trust AmazePMS to run their day."
         />
@@ -47,7 +47,7 @@ export default function Testimonials() {
           {testimonials.map((t, i) => (
             <Reveal key={t.name} direction="up" delay={(i % 2) * 0.1}>
               <figure className="group relative flex h-full flex-col justify-between overflow-hidden rounded-3xl border border-border bg-surface/60 p-7 transition-colors duration-300 hover:border-border-strong">
-                <Quote className="absolute right-6 top-6 h-10 w-10 text-white/[0.04]" />
+                <Quote className="absolute right-6 top-6 h-10 w-10 text-white/4" />
                 <div>
                   <div className="flex gap-0.5">
                     {Array.from({ length: 5 }).map((_, s) => (
@@ -59,7 +59,7 @@ export default function Testimonials() {
                   </blockquote>
                 </div>
                 <figcaption className="mt-7 flex items-center gap-3 border-t border-border pt-5">
-                  <span className="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-primary to-accent text-sm font-semibold text-primary-foreground">
+                  <span className="flex h-11 w-11 items-center justify-center rounded-full bg-linear-to-br from-primary to-accent text-sm font-semibold text-primary-foreground">
                     {t.initials}
                   </span>
                   <div>

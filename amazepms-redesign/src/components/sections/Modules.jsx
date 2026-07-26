@@ -47,7 +47,7 @@ export default function Modules() {
     <section id="modules" className="relative px-4 py-24 lg:py-32">
       <div className="mx-auto max-w-6xl">
         <SectionHeading
-          eyebrow="Product modules"
+          // eyebrow="Product modules"
           title="Composable modules for every part of the business"
           subtitle="Turn on exactly what you need. Every module works beautifully on its own and even better together."
         />
@@ -57,7 +57,7 @@ export default function Modules() {
             <Reveal key={m.name} direction="up" delay={(i % 3) * 0.08}>
               <TiltCard className="h-full">
                 <div className="flex items-center justify-between">
-                  <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 text-accent">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-linear-to-br from-primary/20 to-accent/20 text-accent">
                     <m.icon className="h-6 w-6" />
                   </span>
                   <ArrowUpRight className="h-5 w-5 text-muted-foreground transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-foreground" />

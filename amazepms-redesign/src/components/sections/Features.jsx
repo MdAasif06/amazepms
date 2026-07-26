@@ -9,7 +9,7 @@ export default function Features() {
     <section id="features" className="relative px-4 py-24 lg:py-32">
       <div className="mx-auto max-w-6xl">
         <SectionHeading
-          eyebrow="Core features"
+          // eyebrow="Core features"
           title="Everything your team needs, nothing it doesn't"
           subtitle="A focused feature set that covers the full lifecycle of every property — designed to remove busywork and surface what matters."
         />
@@ -53,7 +53,7 @@ export default function Features() {
                     whileInView={{ height: `${h}px` }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.7, delay: i * 0.05 }}
-                    className="w-full rounded-t bg-gradient-to-t from-accent/30 to-accent"
+                    className="w-full rounded-t bg-linear-to-t from-accent/30 to-accent"
                   />
                 ))}
               </div>
@@ -80,7 +80,7 @@ export default function Features() {
           ].map((f, i) => (
             <Reveal key={f.title} className="md:col-span-2" direction="up" delay={i * 0.08}>
               <TiltCard className="h-full">
-                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/[0.05] text-foreground">
+                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/5 text-foreground">
                   <f.icon className="h-5 w-5" />
                 </span>
                 <h3 className="mt-5 font-display text-lg font-semibold">{f.title}</h3>
@@ -111,7 +111,7 @@ export default function Features() {
                   {["SOC 2", "GDPR", "SSO / SAML", "99.99% SLA"].map((b) => (
                     <span
                       key={b}
-                      className="rounded-full border border-border bg-white/[0.02] px-3 py-1.5 text-xs text-muted-foreground"
+                      className="rounded-full border border-border bg-white/2 px-3 py-1.5 text-xs text-muted-foreground"
                     >
                       {b}
                     </span>
@@ -130,7 +130,7 @@ function ChatPreview() {
   return (
     <div className="rounded-2xl border border-border bg-background/60 p-4">
       <div className="flex flex-col gap-3">
-        <div className="max-w-[80%] self-start rounded-2xl rounded-tl-sm bg-white/[0.05] px-4 py-2.5 text-sm">
+        <div className="max-w-[80%] self-start rounded-2xl rounded-tl-sm bg-white/5 px-4 py-2.5 text-sm">
           Hi, my kitchen sink is leaking — can someone take a look?
         </div>
         <div className="max-w-[85%] self-end rounded-2xl rounded-tr-sm bg-primary/90 px-4 py-2.5 text-sm text-primary-foreground">

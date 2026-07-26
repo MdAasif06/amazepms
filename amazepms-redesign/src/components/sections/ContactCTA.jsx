@@ -22,7 +22,7 @@ export default function ContactCTA() {
 
             <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
               <div>
-                <span className="inline-flex items-center gap-2 rounded-full border border-border bg-white/[0.03] px-3 py-1 text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">
+                <span className="inline-flex items-center gap-2 rounded-full border border-border bg-white/3 px-3 py-1 text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">
                   <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse-dot" />
                   Get started
                 </span>

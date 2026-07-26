@@ -47,7 +47,7 @@ export default function Footer() {
                   key={i}
                   href="#top"
                   aria-label="Social link"
-                  className="flex h-10 w-10 items-center justify-center rounded-xl border border-border bg-white/[0.02] text-muted-foreground transition-colors hover:border-border-strong hover:text-foreground"
+                  className="flex h-10 w-10 items-center justify-center rounded-xl border border-border bg-white/02 text-muted-foreground transition-colors hover:border-border-strong hover:text-foreground"
                 >
                   <Icon className="h-4 w-4" />
                 </a>

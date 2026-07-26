@@ -38,7 +38,7 @@ export default function Benefits() {
     <section id="benefits" className="relative px-4 py-24 lg:py-32">
       <div className="mx-auto max-w-6xl">
         <SectionHeading
-          eyebrow="Why choose us"
+          // eyebrow="Why choose us"
           title="Outcomes your whole organization will feel"
           subtitle="AmazePMS isn't just software — it's a measurable advantage across efficiency, revenue, and experience."
         />
@@ -50,7 +50,7 @@ export default function Benefits() {
                 <div className="absolute right-0 top-0 h-32 w-32 translate-x-8 -translate-y-8 rounded-full bg-primary/10 blur-2xl transition-opacity duration-300 group-hover:opacity-100" />
                 <div className="relative flex items-start justify-between gap-6">
                   <div>
-                    <span className="flex h-12 w-12 items-center justify-center rounded-2xl border border-border bg-white/[0.03] text-accent">
+                    <span className="flex h-12 w-12 items-center justify-center rounded-2xl border border-border bg-white/3 text-accent">
                       <b.icon className="h-6 w-6" />
                     </span>
                     <h3 className="mt-5 font-display text-xl font-semibold">{b.title}</h3>

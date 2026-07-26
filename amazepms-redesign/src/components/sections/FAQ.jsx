@@ -75,7 +75,7 @@ export default function FAQ() {
     <section id="faq" className="relative px-4 py-24 lg:py-32">
       <div className="mx-auto max-w-3xl">
         <SectionHeading
-          eyebrow="FAQ"
+          // eyebrow="FAQ"
           title="Questions, answered"
           subtitle="Everything you need to know before getting started. Can't find what you're looking for? Reach out to our team."
         />
