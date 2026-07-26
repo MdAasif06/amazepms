@@ -24,24 +24,30 @@ const columns = [
     links: ["Help center", "API docs", "Community", "Status", "Webinars"],
   },
 ]
-
 export default function Footer() {
   return (
-    <footer className="relative border-t border-border px-4 pb-10 pt-16">
+    <footer className="relative border-t border-border px-4 pt-12 pb-8 sm:px-6 sm:pt-14 sm:pb-10 lg:px-8 lg:pt-16">
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-10 lg:grid-cols-[1.4fr_2.6fr]">
+          {/* Left */}
           <div>
             <a href="#top" className="flex items-center gap-2.5">
               <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary text-primary-foreground">
                 <Building2 className="h-5 w-5" />
               </span>
-              <span className="font-display text-lg font-semibold tracking-tight">AmazePMS</span>
+
+              <span className="font-display text-lg font-semibold tracking-tight">
+                AmazePMS
+              </span>
             </a>
-            <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
-              The operating system for modern property management. Run leasing, accounting,
-              maintenance, and resident experience from one intelligent platform.
+
+            <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground sm:max-w-xs sm:text-base">
+              The operating system for modern property management. Run leasing,
+              accounting, maintenance, and resident experience from one
+              intelligent platform.
             </p>
-            <div className="mt-6 flex gap-2">
+
+            <div className="mt-6 flex gap-3">
               {[Globe, Mail, Phone].map((Icon, i) => (
                 <a
                   key={i}
@@ -55,10 +61,14 @@ export default function Footer() {
             </div>
           </div>
 
+          {/* Links */}
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">
             {columns.map((col) => (
               <div key={col.title}>
-                <h3 className="text-sm font-semibold">{col.title}</h3>
+                <h3 className="text-sm font-semibold">
+                  {col.title}
+                </h3>
+
                 <ul className="mt-4 flex flex-col gap-2.5">
                   {col.links.map((link) => (
                     <li key={link}>
@@ -67,6 +77,7 @@ export default function Footer() {
                         className="group inline-flex items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-foreground"
                       >
                         {link}
+
                         <ArrowUpRight className="h-3 w-3 opacity-0 transition-opacity group-hover:opacity-100" />
                       </a>
                     </li>
@@ -77,23 +88,36 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-border pt-6 sm:flex-row">
+        {/* Bottom */}
+        <div className="mt-10 flex flex-col items-center gap-4 border-t border-border pt-6 text-center sm:mt-12 sm:flex-row sm:justify-between sm:text-left lg:mt-14">
           <p className="text-xs text-muted-foreground">
             © {new Date().getFullYear()} AmazePMS, Inc. All rights reserved.
           </p>
-          <div className="flex gap-6 text-xs text-muted-foreground">
-            <a href="#top" className="transition-colors hover:text-foreground">
+
+          <div className="flex flex-wrap justify-center gap-5 text-xs text-muted-foreground sm:justify-end sm:gap-6">
+            <a
+              href="#top"
+              className="transition-colors hover:text-foreground"
+            >
               Privacy
             </a>
-            <a href="#top" className="transition-colors hover:text-foreground">
+
+            <a
+              href="#top"
+              className="transition-colors hover:text-foreground"
+            >
               Terms
             </a>
-            <a href="#top" className="transition-colors hover:text-foreground">
+
+            <a
+              href="#top"
+              className="transition-colors hover:text-foreground"
+            >
               Cookies
             </a>
           </div>
         </div>
       </div>
     </footer>
-  )
+  );
 }

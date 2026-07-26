@@ -1,8 +1,8 @@
-import { useState } from "react"
-import { AnimatePresence, motion } from "framer-motion"
-import { Plus } from "lucide-react"
-import SectionHeading from "../ui/SectionHeading.jsx"
-import Reveal from "../ui/Reveal.jsx"
+import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { Plus } from "lucide-react";
+import SectionHeading from "../ui/SectionHeading.jsx";
+import Reveal from "../ui/Reveal.jsx";
 
 const faqs = [
   {
@@ -29,7 +29,7 @@ const faqs = [
     q: "What kind of support do you offer?",
     a: "Every plan includes in-app chat and email support. Growth and Enterprise plans add a dedicated success manager, priority response times, and onboarding workshops for your team.",
   },
-]
+];
 
 function Item({ faq, isOpen, onToggle, index }) {
   return (
@@ -39,17 +39,23 @@ function Item({ faq, isOpen, onToggle, index }) {
           type="button"
           onClick={onToggle}
           aria-expanded={isOpen}
-          className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left"
+          className="flex w-full items-center justify-between gap-3 px-4 py-4 text-left sm:gap-4 sm:px-6 sm:py-5"
         >
-          <span className="font-display text-base font-medium sm:text-lg">{faq.q}</span>
+          <span className="font-display text-sm font-medium leading-6 sm:text-lg">
+            {faq.q}
+          </span>
+
           <span
             className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-border transition-all duration-300 ${
-              isOpen ? "rotate-45 bg-primary text-primary-foreground" : "text-muted-foreground"
+              isOpen
+                ? "rotate-45 bg-primary text-primary-foreground"
+                : "text-muted-foreground"
             }`}
           >
             <Plus className="h-4 w-4" />
           </span>
         </button>
+
         <AnimatePresence initial={false}>
           {isOpen && (
             <motion.div
@@ -59,28 +65,32 @@ function Item({ faq, isOpen, onToggle, index }) {
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
             >
-              <p className="px-6 pb-6 text-sm leading-relaxed text-muted-foreground">{faq.a}</p>
+              <p className="px-4 pb-4 text-sm leading-relaxed text-muted-foreground sm:px-6 sm:pb-6">
+                {faq.a}
+              </p>
             </motion.div>
           )}
         </AnimatePresence>
       </div>
     </Reveal>
-  )
+  );
 }
 
 export default function FAQ() {
-  const [open, setOpen] = useState(0)
+  const [open, setOpen] = useState(0);
 
   return (
-    <section id="faq" className="relative px-4 py-24 lg:py-32">
+    <section
+      id="faq"
+      className="relative px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-32"
+    >
       <div className="mx-auto max-w-3xl">
         <SectionHeading
-          // eyebrow="FAQ"
           title="Questions, answered"
           subtitle="Everything you need to know before getting started. Can't find what you're looking for? Reach out to our team."
         />
 
-        <div className="mt-12 flex flex-col gap-3">
+        <div className="mt-8 flex flex-col gap-3 sm:mt-10 lg:mt-12">
           {faqs.map((faq, i) => (
             <Item
               key={faq.q}
@@ -93,5 +103,5 @@ export default function FAQ() {
         </div>
       </div>
     </section>
-  )
+  );
 }

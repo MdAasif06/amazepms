@@ -44,31 +44,44 @@ const modules = [
 
 export default function Modules() {
   return (
-    <section id="modules" className="relative px-4 py-24 lg:py-32">
+    <section
+      id="modules"
+      className="relative px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-32"
+    >
       <div className="mx-auto max-w-6xl">
         <SectionHeading
-          // eyebrow="Product modules"
           title="Composable modules for every part of the business"
           subtitle="Turn on exactly what you need. Every module works beautifully on its own and even better together."
         />
 
-        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid gap-5 sm:mt-12 sm:grid-cols-2 lg:mt-14 lg:grid-cols-3">
           {modules.map((m, i) => (
             <Reveal key={m.name} direction="up" delay={(i % 3) * 0.08}>
               <TiltCard className="h-full">
                 <div className="flex items-center justify-between">
-                  <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-linear-to-br from-primary/20 to-accent/20 text-accent">
-                    <m.icon className="h-6 w-6" />
+                  <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-linear-to-br from-primary/20 to-accent/20 text-accent sm:h-12 sm:w-12">
+                    <m.icon className="h-5 w-5 sm:h-6 sm:w-6" />
                   </span>
-                  <ArrowUpRight className="h-5 w-5 text-muted-foreground transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-foreground" />
+
+                  <ArrowUpRight className="h-4 w-4 text-muted-foreground transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-foreground sm:h-5 sm:w-5" />
                 </div>
-                <h3 className="mt-5 font-display text-xl font-semibold">{m.name}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{m.body}</p>
+
+                <h3 className="mt-4 font-display text-lg font-semibold sm:mt-5 sm:text-xl">
+                  {m.name}
+                </h3>
+
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground sm:text-base">
+                  {m.body}
+                </p>
+
                 <ul className="mt-5 flex flex-col gap-2 border-t border-border pt-4">
                   {m.points.map((p) => (
-                    <li key={p} className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-                      {p}
+                    <li
+                      key={p}
+                      className="flex items-center gap-2 text-sm text-muted-foreground sm:text-base"
+                    >
+                      <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                      <span>{p}</span>
                     </li>
                   ))}
                 </ul>
@@ -78,5 +91,5 @@ export default function Modules() {
         </div>
       </div>
     </section>
-  )
+  );
 }
