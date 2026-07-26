@@ -46,7 +46,7 @@ export default function Features() {
                 Occupancy, delinquency, and NOI tracked in real time with forecasts you can trust.
               </p>
               <div className="mt-6 flex items-end gap-1.5">
-                {[40, 55, 48, 70, 62, 85, 78].map((h, i) => (
+                {[140, 55, 148, 70, 92, 85, 178].map((h, i) => (
                   <motion.span
                     key={i}
                     initial={{ height: 6 }}

@@ -29,8 +29,8 @@ export default function About() {
             <SectionHeading
               align="left"
               // eyebrow="Why AmazePMS"
-              title="Replace a dozen disconnected tools with one intelligent workspace"
-              subtitle="Property teams lose hours every week stitching together spreadsheets, portals, and legacy software. AmazePMS brings every workflow into one place — thoughtfully designed, deeply integrated, and genuinely enjoyable to use."
+              title="One Intelligent Business Workspace"
+              // subtitle="Property teams lose hours every week stitching together spreadsheets, portals, and legacy software. AmazePMS brings every workflow into one place — thoughtfully designed, deeply integrated, and genuinely enjoyable to use."
             />
 
             <div className="mt-10 flex flex-col gap-6">

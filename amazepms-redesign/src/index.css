@@ -1,17 +1,15 @@
 @import "tailwindcss";
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @theme {
   /* Fonts */
-  --font-sans:"Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,sans-serif;
-  --font-display: "Geist", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "Geist Mono", ui-monospace, "SFMono-Regular", monospace;
+   --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
 
   /* Core surfaces */
-  --color-background: #050816;
-  --color-foreground: #eef1f8;
+  --color-background: #09090B;
+  --color-foreground: #FAFAFA;
 
-  --color-surface: #0d0f18;
-  --color-surface-2: #111420;
+  --color-surface: #111113;
+  --color-surface-2: #18181B;
   --color-border: rgba(255, 255, 255, 0.08);
   --color-border-strong: rgba(255, 255, 255, 0.14);
 
