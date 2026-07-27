@@ -147,23 +147,10 @@ export default function Navbar() {
       <AnimatePresence>
         {open && (
           <motion.div
-            initial={{ opacity: 0, y: -15 }}
-            animate={{ opacity: 4, y: 0 }}
-            exit={{ opacity: 0, y: -15 }}
-            transition={{
-              duration: 0.25,
-            }}
-            className="
-            absolute
-            left-4
-            right-4
-            top-18
-            rounded-2xl
-            glass-strong
-            p-4
-            shadow-card
-            lg:hidden
-            "
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="absolute left-4 right-4 top-18 z-999 bg-red-500 p-10"
           >
             <div className="flex flex-col gap-1">
               {links.map((link) => (
