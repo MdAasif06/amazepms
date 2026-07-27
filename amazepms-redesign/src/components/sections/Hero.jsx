@@ -23,76 +23,6 @@ const item = {
     transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] },
   },
 };
-
-// export default function Hero() {
-//   return (
-//     <section
-//       id="top"
-//       className="relative overflow-hidden px-4 pb-16 pt-32 sm:pt-40 lg:pb-24"
-//     >
-//       <div className="mx-auto max-w-7xl">
-//         <motion.div
-//           variants={container}
-//           initial="hidden"
-//           animate="show"
-//           className="grid items-center gap-14 lg:grid-cols-2"
-//         >
-//           {/* LEFT */}
-//           <div className="text-center lg:text-left -mt-6.25">
-//             <motion.h1
-//               variants={item}
-//               className="  font-display text-5xl font-bold leading-tight lg:text-7xl"
-//             >
-//               The operating system for
-//               <span className="text-gradient-brand">
-//                 {" "}
-//                 modern property management
-//               </span>
-//             </motion.h1>
-
-//             <motion.p
-//               variants={item}
-//               className="mt-6 max-w-xl text-lg text-muted-foreground"
-//             >
-//               AmazePMS unifies leasing, accounting, maintenance and resident
-//               experience into one beautifully fast workspace.
-//             </motion.p>
-
-//             <motion.div
-//               variants={item}
-//               className="mt-8 flex flex-wrap gap-4 justify-center lg:justify-start"
-//             >
-//               <Button variant="primary" size="lg">
-//                 Free Trial
-//               </Button>
-
-//               <Button variant="secondary" size="lg">
-//                 How it works
-//               </Button>
-//             </motion.div>
-//           </div>
-
-//           {/* RIGHT */}
-//           <motion.div
-//             variants={item}
-//             className="flex justify-center lg:justify-end"
-//           >
-//             {/* <DashboardIllustration /> */}
-//             <motion.img
-//               initial={{ opacity: 0, x: 80 }}
-//               animate={{ opacity: 1, x: 0 }}
-//               transition={{
-//                 duration: 0.8,
-//               }}
-//               src=".././hero3.png"
-//               className="relative h-96 z-10 w-full rounded-2xl max-w-190"
-//             />
-//           </motion.div>
-//         </motion.div>
-//       </div>
-//     </section>
-//   );
-// }
 export default function Hero() {
   return (
     <section
@@ -131,11 +61,7 @@ export default function Hero() {
               variants={item}
               className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center sm:gap-4 lg:justify-start"
             >
-              <Button
-                variant="primary"
-                size="lg"
-                className="w-full sm:w-auto"
-              >
+              <Button variant="primary" size="lg" className="w-full sm:w-auto">
                 Free Trial
               </Button>
 
@@ -186,9 +112,7 @@ function MiniStat({ icon: Icon, label, value, accent }) {
       <div className="flex min-w-0 items-center gap-3">
         <span
           className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-xl sm:h-10 sm:w-10 ${
-            accent
-              ? "bg-accent/15 text-accent"
-              : "bg-white/5 text-foreground"
+            accent ? "bg-accent/15 text-accent" : "bg-white/5 text-foreground"
           }`}
         >
           <Icon className="h-4 w-4 sm:h-5 sm:w-5" />

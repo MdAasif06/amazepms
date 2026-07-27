@@ -43,14 +43,7 @@ export default function Navbar() {
         duration: 0.6,
         ease: [0.22, 1, 0.36, 1],
       }}
-      className="
-        fixed
-        inset-x-0
-        top-0
-        z-50
-        flex
-        w-full
-        justify-center
+      className="fixed inset-x-0 top-0 z-50 flex w-full justify-center
         px-4
         pt-3
         sm:px-6
@@ -60,13 +53,7 @@ export default function Navbar() {
     >
       <nav
         className={cn(
-          `
-          flex
-          w-full
-          max-w-7xl
-          items-center
-          justify-between
-          rounded-2xl
+          `flex w-full max-w-7xl items-center justify-between rounded-2xl
           px-3
           py-2
           transition-all
@@ -86,13 +73,7 @@ export default function Navbar() {
           className="flex items-center gap-2.5"
         >
           <span
-            className="
-            flex
-            h-9
-            w-9
-            items-center
-            justify-center
-            rounded-xl
+            className="flex h-9 w-9 items-center justify-center rounded-xl
             bg-primary
             text-primary-foreground
             shadow-[0_8px_24px_-8px_rgba(79,124,255,0.9)]
@@ -126,11 +107,7 @@ export default function Navbar() {
                   window.history.pushState({}, "", link.href);
                 }
               }}
-              className="
-              rounded-full
-              px-3.5
-              py-2
-              text-sm
+              className="rounded-full px-3.5 py-2 text-sm
               text-muted-foreground
               transition-colors
               hover:bg-white/5
@@ -158,14 +135,7 @@ export default function Navbar() {
           type="button"
           onClick={() => setOpen(!open)}
           aria-label={open ? "Close menu" : "Open menu"}
-          className="
-          flex
-          h-10
-          w-10
-          items-center
-          justify-center
-          rounded-xl
-          glass
+          className="flex h-10 w-10 items-center justify-center rounded-xl glass
           lg:hidden
           "
         >
@@ -177,18 +147,9 @@ export default function Navbar() {
       <AnimatePresence>
         {open && (
           <motion.div
-            initial={{
-              opacity: 0,
-              y: -15,
-            }}
-            animate={{
-              opacity: 1,
-              y: 0,
-            }}
-            exit={{
-              opacity: 0,
-              y: -15,
-            }}
+            initial={{ opacity: 0, y: -15 }}
+            animate={{ opacity: 4, y: 0 }}
+            exit={{ opacity: 0, y: -15 }}
             transition={{
               duration: 0.25,
             }}
@@ -210,16 +171,11 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={closeMenu}
-                  className="
-                  rounded-xl
-                  px-4
-                  py-3
-                  text-sm
+                  className="rounded-xl px-4 py-3 text-sm
                   text-muted-foreground
                   transition-colors
                   hover:bg-white/5
-                  hover:text-foreground
-                  "
+                  hover:text-foreground"
                 >
                   {link.label}
                 </a>
