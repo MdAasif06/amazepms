@@ -150,7 +150,18 @@ export default function Navbar() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="absolute left-4 right-4 top-18 z-999 bg-red-500 p-10"
+            className=" absolute
+    left-4
+    right-4
+    top-full
+    mt-3
+    rounded-2xl
+    glass-strong
+    p-4
+    shadow-card
+    z-[999]
+    lg:hidden
+  "
           >
             <div className="flex flex-col gap-1">
               {links.map((link) => (
