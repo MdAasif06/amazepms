@@ -3,11 +3,11 @@ import SectionHeading from "../ui/SectionHeading.jsx";
 import Reveal from "../ui/Reveal.jsx";
 
 const highlights = [
-  {
-    icon: Layers,
-    title: "One connected platform",
-    body: "Leasing, accounting, maintenance, and communications share a single database — no exports, no reconciliation, no silos.",
-  },
+  // {
+  //   icon: Layers,
+  //   title: "One connected platform",
+  //   body: "Leasing, accounting, maintenance, and communications share a single database — no exports, no reconciliation, no silos.",
+  // },
   {
     icon: Zap,
     title: "Fast by design",
